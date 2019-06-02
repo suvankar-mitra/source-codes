@@ -1,0 +1,9 @@
+#editor {
+    height: 75vh;
+    margin-bottom: 60px;
+}
+
+.shadowy:hover {
+    box-shadow: .8px .9px 3px grey, -.8px -.9px 3px grey;
+    -webkit-transition:  box-shadow .2s ease-in;
+}

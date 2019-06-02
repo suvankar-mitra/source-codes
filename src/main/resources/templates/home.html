@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Source Codes</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <link rel="stylesheet" th:href="@{/css/home.css}"/>
+</head>
+<body>
+<!-- Nav bar -->
+<nav class="navbar navbar-expand-sm bg-light justify-content-end">
+    <a href="/source" class="navbar-brand d-flex mr-auto">Source Codes</a>
+    <div class="col-md-2 text-right"><a href="/source/write" class="btn btn-sm btn-outline-primary">Write <i data-feather="edit"></i></a></div>
+    <ul class="navbar-nav">
+        <li class="nav-item">
+            <a class="nav-link" href="#">Login</a>
+        </li>
+        <li class="nav-item">
+            <a class="btn btn-outline-primary" href="#">Signup</a>
+        </li>
+    </ul>
+</nav>
+
+<div class="container-fluid">
+    <div class="jumbotron text-center">
+<!--        <h1>Source Codes</h1>-->
+        <h1>Learn . Write . Share</h1>
+        <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-2 text-right"><a href="/source/write" class="btn btn-sm btn-outline-primary">Write <i data-feather="edit"></i></a></div>
+            <div class="col-md-2 text-left"><a href="#" class="btn btn-sm btn-outline-secondary">Browse <i data-feather="book"></i></a></div>
+        </div>
+    </div>
+    <div class="row sticky-top" style="background-color:white; padding-top: 10px;">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <form action="/search" method="get">
+                    <div class="input-group">
+                        <input type="text" id="q" name="q" class="form-control" placeholder="type here ...">
+                        <div class="input-group-append">
+                            <button type="submit" class="btn btn-secondary">Search</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<br><br>
+<div class="container">
+    <div>
+        <div class="row">
+            <div class="col text-center">
+                <h6>Top viewed</h6>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-md-4 py-2">
+                <div class="card shadowy h-100">
+                    <div class="card-header">Bubble Sort</div>
+                    <div class="card-body"><span th:utext="${body}"></span></div>
+                    <div class="card-footer">
+                        <div class="row">
+                            <div class="col">
+                                <span><a href="#">#sort</a></span>
+                                <span><a href="#">#algorithm</a></span>
+                                <span><a href="#">#bubble</a></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <div class="row">
+                            <div class="col">
+                                <span>2k views</span>
+                            </div>
+                            <div class="col">
+                                <a href="#" class="float-right"><i data-feather="code"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 py-2">
+                <div class="card h-100 disabled-card" align="center">
+                    <div class="card-body">
+                        <i data-feather="more-horizontal"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 py-2">
+                <div class="card h-100 disabled-card" align="center">
+                    <div class="card-body">
+                        <i data-feather="more-horizontal"></i>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <br><br>
+
+    <div>
+        <div class="row">
+            <div class="col text-center">
+                <h6>Recently Added</h6>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <!--        <div class="col-md-1"></div>-->
+            <div class="col-md-3 py-2">
+                <div class="card shadowy h-100">
+                    <div class="card-header">Bubble Sort</div>
+                    <div class="card-body">Bubble Sort is the simplest sorting algorithm that works by repeatedly swapping the ...</div>
+                    <div class="card-footer">
+                        <div class="row">
+                            <div class="col">
+                                1 hour ago
+                            </div>
+                            <div class="col">
+                                <a href="#" class="float-right"><i data-feather="code"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 py-2">
+                <div class="card h-100 disabled-card" align="center">
+                    <div class="card-body">
+                        <i data-feather="more-horizontal"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 py-2">
+                <div class="card h-100 disabled-card" align="center">
+                    <div class="card-body">
+                        <i data-feather="more-horizontal"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 py-2">
+                <div class="card h-100 disabled-card" align="center">
+                    <div class="card-body">
+                        <i data-feather="more-horizontal"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br><br>
+    <div class="text-center">
+        <a href="#" class="btn btn-link">Browse all</a>
+    </div>
+
+</div>
+</body>
+<script>
+      feather.replace();
+</script>
+</html>
